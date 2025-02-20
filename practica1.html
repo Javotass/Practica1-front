@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: tan;
+            color: white;
+        }
+        .perfil img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombreado foro perfil*/
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            border-bottom: 2px solid grey;
+            padding-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .trabajo, .proyecto {
+            margin-bottom: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: tan;
+            color: white;
+        }
+        a {
+            color: paleturquoise;
+            text-decoration: none;
+        }
+        .social-buttons {
+            margin-top: 10px;
+        }
+        .social-buttons a {
+            display: inline-block;
+            margin: 5px;
+        }
+        .social-buttons img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.2s ease-in-out;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.7); /* Sombra para los iconos */
+        }
+        .social-buttons img:hover {
+            transform: scale(1.1); /* Efecto de agrandamiento al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="perfil">
+            <img src="image.jpg" alt="Foto de perfil">
+            <h1>Javier Revilla Sáez</h1>
+            <h1>Carlos Barranco Tena</h1>
+            <p>Ingenieros Informáticos & Programadores Junior</p>
+            <p><i class="localización">📍 Madrid, España</i></p>
+            <div class="social-buttons">
+                <a href="https://x.com/marperfig" target="_blank"><img src="twitter.jpg" alt="Twitter" object-fit: cover></a>
+                <a href="https://github.com/Javotass" target="_blank"><img src="github.jpg" alt="GitHub"></a>
+                <a href="mailto:jrevillas@alumnos.nebrija.es" target="_blank"><img src="gmail.png" alt="Gmail"></a>
+                <a href="tel: 644444444" target="_blank"><img src="telefono.jpg" alt="Teléfono"></a>
+                <a href="https://www.linkedin.com/in/javier-revilla-sáez-704701302/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+                
+            </div>
+        </div>
+    </header>
+
+    <section class= "sobre">
+        <h2>Sobre mí</h2>
+        <p>Somos dos graduados en Ingeniería Informática apasionados por la tecnología y el desarrollo de software.
+            Actualmente trabajamos en una empresa de tecnología, donde participamos en la creación de soluciones innovadoras para clientes de diversas industrias.
+            Nos especializamos en desarrollo Full Stack, 
+            inteligencia artificial y seguridad informática, buscando siempre mejorar nuestras habilidades y aportar valor a cada proyecto.</p>
+    </section>
+
+    <section class= "experiencia">
+        <h2>Experiencia Laboral</h2>
+        <div class="trabajo">
+            <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                <span>Empresa 1 - Google</span>
+                <span>2020 - 2022</span>
+            </h3>
+            <p><i>Prácticas de Ingeniero de Software en Google. </i></p>
+            <p>Trabajamos en Gemini Assist Code siendo introducidos al código y ayudando a implantar algoritmos.</p>
+        </div>
+        <div class="trabajo">
+            <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                <span>Empresa 2 - Intel</span>
+                <span>2022 - 2024</span>
+            </h3>
+            <p><i>Prácticas de Ingeniero de Software en Intel.</i></p>
+            <p>Ayudamos con la creación de procesadores.</p>
+        </div>
+        <div class="trabajo">
+            <h3 style="display: flex; justify-content: space-between; align-items: center;">
+                <span>Empresa 3 - Adidas</span>
+                <span>2018 - 2020</span>
+            </h3>
+            <p><i>Dependiente de Tienda Física Adidas</i></p>
+            <p>Atendiamos a los clientes y reponiamos ropa.</p>
+        </div>
+    </section>
+
+    <section class= "Educación">
+        <h2>
+            Educación Universidad
+            <button onclick="toggleEducation()">Mostrar más</button>
+        </h2>
+        <p style="display: flex; justify-content: space-between; align-items: center;">
+            <span><strong>Universidad Antonio de Nebrija</strong></span>
+            <span>2020 - 2024</span>
+        </p>
+        <p><i>Ingeniería Informática</i></p>
+        <div id= "educaciónExtra" style="display:none;">
+            <p>Hemos terminado la carrera de Ingeniería Informática junto con el diploma de Transformación Digital</p>
+        </div>
+    </section>
+    
+    <script>
+        function toggleEducation() {
+            var educaciónExtra = document.getElementById('educaciónExtra');
+            if (educaciónExtra.style.display === "none") {
+                educaciónExtra.style.display = "block";
+            } else {
+                educaciónExtra.style.display = "none";
+            }
+        }
+    </script>
+
+    <section class="proyecto">
+        <h2>Proyectos</h2>
+        <div class="proyecto">
+            <h3>Proyecto 1</h3>
+            <a href="https://www.friv.com/">Juegos Friv</a> 
+            <p>Participamos como parte del equipo de diseño y planificación de futuros juegos</p>
+        </div>
+        <div class="proyecto">
+            <h3>Proyecto 2</h3>
+            <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada">Wikipedia</a>
+            <p>Fuimos nombrados editores oficiales de wikipedia debido a nuestros altos conocimientos en el ámbito de la informática y desarrollo web </p>
+        </div>
+        <div class="proyecto">
+            <h3>Proyecto 3</h3>
+            <a href="https://www.laliga.com/">Web LaLiga</a> 
+            <p>Formamos parte del comité de expertos del arbitraje español (fuimos culpables de la sanción del astro angloparlante Bellingham(HIGH LEVEL OF ENGLISH))</p>
+        </div>
+    </section>
+
+    <section class="habilidades">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Tailwind</li>
+            <li>TypeScript</li>
+            <li>Node</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Contacto Carlos: <a href="cbarrancot@alumnos.nebrija.es">cbarrancot@alumnos.nebrija.es</a></p>
+        <p>Contacto Javier: <a href="jrevillas@alumnos.nebrija.es">jrevillas@alumnos.nebrija.es</a></p>
+        <p>Sígueme en: 
+            <a href="https://www.linkedin.com/in/javier-revilla-sáez-704701302/" target="_blank" >LinkedIn</a> | 
+            <a href="https://github.com/javotass" target="_blank">GitHub</a> |
+            <a href="https://x.com/Jimbo4xL" target="_blank" >Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>
